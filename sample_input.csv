@@ -1,0 +1,11 @@
+Indicateur_principal,indicateur,valeur
+Identification,LBP,100
+Identification,LP,85
+ReponsePopin_LBP_LPM,Association,50
+ReponsePopin_LP_LBP_LPM,Peut-être,30
+Creation_Lien,LP,25
+Popin,LPM,75
+Primo_Identification_Popin,LP,60
+Validation_Lien,LBP,40
+Suppression_Lien,LP,15
+ReponsePopin_LBP,Refus,20

@@ -1,0 +1,11 @@
+event_date,event_type,popin_code,response_code,initial_universe,universe_context,universe_count,measure_count,source_indicateur_principal,source_indicateur,quality_flag,quality_detail
+,IDENTIFICATION,,,LBP,,0,100,Identification,LBP,OK,
+,IDENTIFICATION,,,LP,,0,85,Identification,LP,OK,
+,POPIN_RESPONSE,ASSOCIATION_LIEN,ASSOCIATION,,LBP|LPM,2,50,ReponsePopin_LBP_LPM,Association,OK,
+,POPIN_RESPONSE,,PEUT_ETRE,,LP|LBP|LPM,3,30,ReponsePopin_LP_LBP_LPM,Peut-être,OK,
+,LINK_CREATED,,,,,0,25,Creation_Lien,LP,OK,
+,POPIN_DISPLAYED,,,LPM,,0,75,Popin,LPM,OK,
+,POPIN_DISPLAYED,PRIMO_IDENTIFICATION,,LP,,0,60,Primo_Identification_Popin,LP,OK,
+,LINK_VALIDATED,,,,,0,40,Validation_Lien,LBP,OK,
+,LINK_DELETED,,,,,0,15,Suppression_Lien,LP,OK,
+,POPIN_RESPONSE,,REFUS,,LBP,1,20,ReponsePopin_LBP,Refus,OK,

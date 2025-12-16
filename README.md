@@ -40,6 +40,26 @@ Your file must contain these columns:
 | `valeur` / `count` | ❌ | Measure value (defaults to 1) |
 | `date` / `periode` | ❌ | Date/period value |
 
+## 🔄 Column Normalization
+
+The app automatically normalizes column names to handle case variations and common aliases.
+
+### Supported Aliases
+
+| Input Column | → Normalized |
+|--------------|--------------|
+| `Indicateur_Principal` | `Indicateur_principal` |
+| `indicateur_principal` | `Indicateur_principal` |
+| `Indicateur-Principal` | `Indicateur_principal` |
+| `indicateur principal` | `Indicateur_principal` |
+
+All column names are also:
+- Trimmed of leading/trailing whitespace
+- Normalized by replacing spaces and hyphens with underscores
+
+If any columns are auto-mapped, a notification appears in the UI:
+> 🔄 **Colonnes auto-mappées :** `Indicateur_Principal` → `Indicateur_principal`
+
 ## 📤 Output Structure
 
 ### MVP Tidy (`normalized_events.csv`)

@@ -12,6 +12,7 @@ import streamlit as st
 from services.normalizer import normalize_dataframe, get_quality_summary
 from services.schema import generate_star_schema, create_zip_archive
 from utils.mappings import MEASURE_COLUMN_CANDIDATES, DATE_COLUMN_CANDIDATES
+from utils.columns import normalize_columns, format_column_mapping_message
 
 
 # Page configuration
@@ -90,6 +91,14 @@ def main():
     except Exception as e:
         st.error(f"❌ Error loading file: {e}")
         return
+    
+    # Normalize column names (case-insensitive, handle aliases)
+    df, column_mapping = normalize_columns(df)
+    
+    # Display column mapping info if any remapping occurred
+    if column_mapping:
+        mapping_msg = format_column_mapping_message(column_mapping)
+        st.info(f"🔄 {mapping_msg}")
     
     # Validate required columns
     required_cols = ["Indicateur_principal", "indicateur"]
